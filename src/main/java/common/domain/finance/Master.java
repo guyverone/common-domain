@@ -7,8 +7,6 @@ import common.domain.annotation.Label;
 import common.domain.annotation.NotEmpty;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
-import java.util.List;
 
 /**
  * <p>Master Class</p>
@@ -22,6 +20,7 @@ public class Master {
     @NotEmpty@Label("companyName")
     private String companyName;
 
+    @NotEmpty(exclusion = EnumUsedBusinessType.TYPEB)
     private String subCmpId;
     private String subCmpName;
 
